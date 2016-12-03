@@ -1,1 +1,1 @@
-# org.nem
+# Java EE utility projects
