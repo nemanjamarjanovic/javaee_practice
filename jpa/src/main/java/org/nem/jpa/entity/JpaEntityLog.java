@@ -4,14 +4,13 @@ import java.time.LocalDateTime;
 import javax.persistence.MappedSuperclass;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
-import javax.persistence.Version;
 
 /**
  *
  * @author nemanja
  */
 @MappedSuperclass
-public abstract class JpaEntityLog<T> extends JpaEntity<T> {
+public abstract class JpaEntityLog extends JpaEntity {
 
     private String createdBy;
     private String lastModifiedBy;

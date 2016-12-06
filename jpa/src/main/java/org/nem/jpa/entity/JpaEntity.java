@@ -11,19 +11,19 @@ import javax.persistence.Version;
  * @author nemanja
  */
 @MappedSuperclass
-public abstract class JpaEntity<T> implements Serializable {
+public abstract class JpaEntity implements Serializable {
 
     @Id
-    private T id;
+    private Integer id;
 
     @Version
     private long version;
 
-    public T getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(T id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -45,7 +45,7 @@ public abstract class JpaEntity<T> implements Serializable {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final JpaEntity<?> other = (JpaEntity<?>) obj;
+        final JpaEntity other = (JpaEntity) obj;
         if (!Objects.equals(this.id, other.id)) {
             return false;
         }
